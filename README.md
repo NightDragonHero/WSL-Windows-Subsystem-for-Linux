@@ -77,9 +77,9 @@ Anschließend wurde Ubuntu installiert. In der vorliegenden Durchführung wurde 
 
 Nach dem ersten Start wurde ein Linux-Benutzername und ein Passwort erstellt. Dieses Passwort wird später auch für `sudo`-Befehle und für die Anmeldung über XRDP benötigt [1], [3].
 
-![Installation von Ubuntu über den Microsoft Store](images/02_ubuntu_installation.png)
+![Installation von Ubuntu über den Microsoft Store](Bilder/Ubuntu-Micr)
 
-![Erster Start von Ubuntu und Anlegen von Benutzername und Passwort](images/03_first_start_user.png)
+![Erster Start von Ubuntu und Anlegen von Benutzername und Passwort](Bilder/Remote Desktop GUI- anfang)
 
 ### 4.3 Aktualisierung des Systems
 
