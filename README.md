@@ -269,7 +269,7 @@ startxfce4
 
 Die Datei wurde mit **STRG + O** gespeichert und mit **STRG + X** wieder geschlossen.
 
-![Bearbeitung von startwm.sh in nano](Bilder/Remote Desktop GUI - geändert)
+![Bearbeitung von startwm.sh in nano](Bilder/RemoteDesktopGUI-geändert)
 
 ### 4.13 Verbindung über Remote Desktop
 
