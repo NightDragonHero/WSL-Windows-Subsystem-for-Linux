@@ -246,58 +246,32 @@ Damit konnten relevante Stellen in den bereitgestellten PDF-Dateien schnell gefu
 
 ### 4.12 Installation einer grafischen Oberfläche
 
-Da in der Aufgabenstellung zusätzlich eine grafische Oberfläche gefordert war, wurden die vorgegebenen Befehle in WSL ausgeführt.
-
-Zuerst wurde das System aktualisiert und anschließend XFCE installiert:
+Da in der Aufgabenstellung zusätzlich eine grafische Oberfläche gefordert war, wurden die vorgegebenen Befehle in WSL **einzeln** ausgeführt.
 
 ```bash
 sudo apt update && sudo apt full-upgrade
 sudo apt install xfce4 xfce4-goodies
-```
-
-Danach wurde XRDP installiert:
-
-```bash
 sudo apt install xrdp
-```
-
-![Installation von XFCE und XRDP](images/12_xfce_xrdp_install.png)
-
-### 4.13 Anpassung der XRDP-Konfiguration
-
-Entsprechend der Angabe wurde die Konfigurationsdatei zuerst gesichert:
-
-```bash
 sudo cp /etc/xrdp/xrdp.ini /etc/xrdp/xrdp.ini.bak
-```
-
-Danach wurden die vorgegebenen `sed`-Befehle ausgeführt:
-
-```bash
 sudo sed -i 's/3389/3390/g' /etc/xrdp/xrdp.ini
 sudo sed -i 's/max_bpp=32/#max_bpp=32\nmax_bpp=128/g' /etc/xrdp/xrdp.ini
 sudo sed -i 's/xserverbpp=24/#xserverbpp=24\nxserverbpp=128/g' /etc/xrdp/xrdp.ini
-```
-
-Dabei wurde der Standardport 3389 auf 3390 geändert, um Konflikte mit der Windows-eigenen Remotedesktop-Funktion zu vermeiden. Zusätzlich wurden Bildparameter angepasst.
-
-Danach wurde der Dienst gestartet:
-
-```bash
 sudo /etc/init.d/xrdp start
 ```
 
-![Anpassung der XRDP-Konfiguration](images/13_xrdp_config.png)
+Zuerst wurde das System aktualisiert, danach wurden XFCE und XRDP installiert. Anschließend wurde eine Sicherung der Datei `xrdp.ini` erstellt und die Konfiguration entsprechend der Aufgabenstellung angepasst. Abschließend wurde der XRDP-Dienst gestartet.
 
-### 4.14 Bearbeitung von `startwm.sh`
+![Installation von XFCE und XRDP](images/12_xfce_xrdp_install.png)
 
-Laut Aufgabenstellung sollte anschließend die Datei `/etc/xrdp/startwm.sh` mit `nano` bearbeitet werden:
+### 4.13 Bearbeitung von `startwm.sh`
+
+Danach wurde mit folgendem Befehl ein Editor direkt im Terminal geöffnet:
 
 ```bash
 sudo nano /etc/xrdp/startwm.sh
 ```
 
-Die letzten beiden Zeilen wurden auskommentiert und `startxfce4` wurde am Ende ergänzt.
+In der Datei wurden die letzten beiden Zeilen mit `#` auskommentiert. Danach wurde `startxfce4` am Ende eingefügt.
 
 Beispiel:
 
@@ -307,64 +281,29 @@ Beispiel:
 startxfce4
 ```
 
-Die Datei wurde mit **STRG + O** gespeichert und mit **STRG + X** geschlossen.
+Die Datei wurde mit **STRG + O** gespeichert und mit **STRG + X** wieder geschlossen.
 
-![Bearbeitung von startwm.sh in nano](images/14_startwm_sh.png)
+![Bearbeitung von startwm.sh in nano](images/13_startwm_sh.png)
 
-### 4.15 Zusätzliche Fehlerbehebung für WSL
+### 4.14 Verbindung über Remote Desktop
 
-Bei der ersten Verbindung wurde zwar eine XRDP-Sitzung aufgebaut, es erschien jedoch nur ein leerer blauer Hintergrund ohne vollständigen Desktop. Dieses Problem tritt in WSL/XRDP-Konfigurationen häufiger auf und konnte durch zusätzliche Sitzungsanpassungen behoben werden [9].
+Nach der Konfiguration wurde in Windows die Anwendung **Remote Desktop Connection** beziehungsweise **Remotedesktopverbindung** geöffnet. Anschließend wurde eine Verbindung mit
 
-Folgende Ergänzungen wurden verwendet:
-
-```bash
-echo "xfce4-session" > ~/.xsession
-chmod +x ~/.xsession
-sudo service dbus start
-sudo /etc/init.d/xrdp restart
+```text
+localhost:3389
 ```
 
-Danach wurde die Verbindung erneut hergestellt und der XFCE-Desktop korrekt geladen.
-
-![Fehlerbehebung bei leerem blauem Bildschirm](images/15_troubleshooting_xrdp.png)
-
-### 4.16 Verbindung über die Windows-Remotedesktopverbindung
-
-Die Verbindung wurde **nicht** im Browser hergestellt, sondern mit der Windows-Anwendung **Remotedesktopverbindung**. Als Ziel wurde der im XRDP-Server konfigurierte Port verwendet:
+beziehungsweise
 
 ```text
 localhost:3390
 ```
 
-Als Benutzername wurde der zuvor angelegte Ubuntu-Benutzer eingegeben. Danach konnte eine grafische Linux-Sitzung gestartet werden.
+hergestellt, je nachdem welcher Port in der Konfiguration verwendet wurde.
 
-![Verbindung mit localhost:3390](images/16_rdp_connection.png)
+![Verbindung mit Remote Desktop](images/14_rdp_connection.png)
 
-![Erfolgreicher XFCE-Desktop in WSL](images/17_xfce_desktop.png)
-
-### 4.17 Beenden und erneutes Starten der Umgebung
-
-Zum Schließen der grafischen Sitzung konnte das Fenster der Remotedesktopverbindung einfach geschlossen werden. Soll XRDP vollständig gestoppt werden, kann folgender Befehl verwendet werden:
-
-```bash
-sudo /etc/init.d/xrdp stop
-```
-
-Um WSL komplett zu beenden, kann in Windows Folgendes ausgeführt werden:
-
-```powershell
-wsl --shutdown
-```
-
-Zum erneuten Starten reicht normalerweise:
-
-```bash
-wsl
-sudo service dbus start
-sudo /etc/init.d/xrdp start
-```
-
-Danach kann erneut über `localhost:3390` verbunden werden.
+![Erfolgreicher XFCE-Desktop in WSL](images/15_xfce_desktop.png)
 
 ## 5. Zusammenfassung
 
@@ -391,3 +330,4 @@ Zusätzlich wurde eine grafische Oberfläche mit XFCE und XRDP eingerichtet. Dab
 [8] LinuxVox, "Installing xrdp on Ubuntu: A Comprehensive Guide," *LinuxVox*. [Online]. Verfügbar unter: https://linuxvox.com/blog/install-xrdp-ubuntu/. [Zugriff: 18. Juni 2026].
 
 [9] GoLinuxCloud, "How to install XRDP with XFCE4 on Ubuntu?," *GoLinuxCloud*. [Online]. Verfügbar unter: https://www.golinuxcloud.com/install-xrdp-with-xfce4-on-ubuntu/. [Zugriff: 18. Juni 2026].
+
