@@ -69,7 +69,7 @@ Für manche Aufgaben ist eine grafische Oberfläche angenehmer als reines Arbeit
 
 Zuerst wurde in den Windows-Features das **Windows-Subsystem für Linux** aktiviert. Zusätzlich wurde die **Plattform für virtuelle Computer** aktiviert, da aktuelle WSL-Installationen auf dieser Basis arbeiten [1], [3]. Danach wurde das System neu gestartet.
 
-![Aktivierung von WSL in den Windows-Features](images/01_windows_features.png)
+![Aktivierung von WSL in den Windows-Features](Bilder/winFeautures)
 
 ### 4.2 Installation von Ubuntu
 
