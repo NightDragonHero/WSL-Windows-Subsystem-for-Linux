@@ -247,7 +247,7 @@ sudo /etc/init.d/xrdp start
 
 Zuerst wurde das System aktualisiert, danach wurden XFCE und XRDP installiert. Anschließend wurde eine Sicherung der Datei `xrdp.ini` erstellt und die Konfiguration angepasst. Abschließend wurde der XRDP-Dienst gestartet.
 
-![Installation von XFCE und XRDP](Bilder/xrdp-install)
+![Installation von XFCE und XRDP](Bilder/RemoteDesktopGUI-anfang)
 
 ### 4.12 Bearbeitung von `startwm.sh`
 
@@ -269,7 +269,7 @@ startxfce4
 
 Die Datei wurde mit **STRG + O** gespeichert und mit **STRG + X** wieder geschlossen.
 
-![Bearbeitung von startwm.sh in nano](Bilder/startwm)
+![Bearbeitung von startwm.sh in nano](Bilder/Remote Desktop GUI - geändert)
 
 ### 4.13 Verbindung über Remote Desktop
 
@@ -289,9 +289,13 @@ hergestellt.
 
 Nach der Anmeldung mit dem Ubuntu-Benutzer und dem gesetzten Passwort konnte die grafische Oberfläche verwendet werden.
 
-![Verbindung mit Remote Desktop](Bilder/rdp-connection)
+![Starten mit Remote Desktop](Bilder/RemoteDesktopGUI-anfang)
 
-![Erfolgreicher XFCE-Desktop in WSL](Bilder/xfce-desktop)
+![Verbindung mit Remote Desktop](Bilder/RemoteDesktopGUI-passwort)
+
+![Erfolgreicher XFCE-Desktop in WSL](Bilder/RemoteDesktopGUI-ende)
+
+
 
 ### 4.14 Fragestellungen
 
