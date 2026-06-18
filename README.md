@@ -289,7 +289,7 @@ hergestellt.
 
 Nach der Anmeldung mit dem Ubuntu-Benutzer und dem gesetzten Passwort konnte die grafische Oberfläche verwendet werden.
 
-![Starten mit Remote Desktop](Bilder/RemoteDesktopGUI-anfang)
+![Starten mit Remote Desktop](Bilder/winRemoteDesk-start)
 
 ![Verbindung mit Remote Desktop](Bilder/RemoteDesktopGUI-passwort)
 
