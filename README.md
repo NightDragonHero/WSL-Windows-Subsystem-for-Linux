@@ -90,7 +90,7 @@ sudo apt-get upgrade
 
 Mit `sudo apt-get update` werden die Paketquellen aktualisiert. Mit `sudo apt-get upgrade` werden installierte Pakete auf neuere Versionen angehoben.
 
-![Systemaktualisierung in Ubuntu](Bilder/Ubuntu-update)
+
 
 ### 4.4 Speicherverbrauch mit `du` anzeigen und sortieren
 
