@@ -162,7 +162,7 @@ Zusätzlich kann die Paketliste vor der Installation noch einmal aktualisiert we
 sudo apt-get update
 ```
 
-![Installation von pdfgrep](Bilder/pdfgrep-install)
+![Installation von pdfgrep](Bilder/pdfgrep-downl)
 
 ### 4.7 Herunterladen und Vorbereiten der PDF-Dateien
 
@@ -229,7 +229,7 @@ pdfgrep -i -n -H --cache "piezo" *.pdf
 
 Damit konnten relevante Stellen in den bereitgestellten PDF-Dateien schnell gefunden werden.
 
-![Weitere Suchbegriffe mit pdfgrep](Bilder/pdfgrep-weitere-begriffe)
+![Weitere Suchbegriffe mit pdfgrep](Bilder/pdfgrep-benutzt)
 
 ### 4.11 Installation einer grafischen Oberfläche
 
