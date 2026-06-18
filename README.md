@@ -82,7 +82,7 @@ Nach dem ersten Start wurde ein Linux-Benutzername und ein Passwort erstellt. Di
 ![Erster Start von Ubuntu und Anlegen von Benutzername und Passwort](Bilder/Ubuntu-start)
 
 
-### 4.5 Speicherverbrauch mit `du` anzeigen und sortieren
+### 4.3 Speicherverbrauch mit `du` anzeigen und sortieren
 
 Die Aufgabenstellung verlangte die Anzeige des Festplattenverbrauchs und eine Sortierung nach Größe. Dafür wurde zuerst `du` verwendet:
 
@@ -108,7 +108,7 @@ Dabei wird die Ausgabe von `du` per Pipe (`|`) an `sort` übergeben. Mit `-h` ka
 
 ![Speicherverbrauch mit du und sort](Bilder/Ubuntu-Festplatte)
 
-### 4.6 Verwendung von `grep`
+### 4.4 Verwendung von `grep`
 
 `grep` wurde verwendet, um eine Ausgabe einzuschränken. Ein einfaches Beispiel bestand darin, nur PDF-Dateien aus einer Dateiliste anzuzeigen:
 
@@ -130,9 +130,9 @@ ls | grep -Ei "pdf|txt|log"
 
 `grep` durchsucht dabei die Eingabe nach einem Muster und gibt nur passende Zeilen aus [5].
 
-![Beispiel für grep im Terminal](images/07_grep.png)
+![Beispiel für grep im Terminal](Bilder/grep-auspr)
 
-### 4.7 Installation von `pdfgrep`
+### 4.5 Installation von `pdfgrep`
 
 Um Inhalte in PDF-Dateien durchsuchen zu können, wurde `pdfgrep` installiert:
 
@@ -150,7 +150,7 @@ Die Manpage beschreibt die verfügbaren Optionen und zeigt, dass `pdfgrep` weitg
 
 ![Installation von pdfgrep](images/08_pdfgrep_installation.png)
 
-### 4.8 Herunterladen und Vorbereiten der PDF-Dateien
+### 4.6 Herunterladen und Vorbereiten der PDF-Dateien
 
 Im nächsten Schritt wurden die PDF-Dateien **Sensornetzwerke**, **Sensoren** sowie **Sensoren und Sensorschnittstellen** aus dem Theorie-Kurs heruntergeladen und im selben Ordner gespeichert.
 
