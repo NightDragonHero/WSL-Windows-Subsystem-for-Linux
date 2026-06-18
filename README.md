@@ -79,35 +79,8 @@ Nach dem ersten Start wurde ein Linux-Benutzername und ein Passwort erstellt. Di
 
 ![Installation von Ubuntu über den Microsoft Store](Bilder/Ubuntu-Micr)
 
-![Erster Start von Ubuntu und Anlegen von Benutzername und Passwort](Bilder/Remote Desktop GUI- anfang)
+![Erster Start von Ubuntu und Anlegen von Benutzername und Passwort](Bilder/Ubuntu-start)
 
-### 4.3 Aktualisierung des Systems
-
-Nach der Grundinstallation wurde das System aktualisiert, damit Paketlisten und installierte Programme auf dem aktuellen Stand sind.
-
-```bash
-sudo apt-get update
-sudo apt-get upgrade
-```
-
-Mit `sudo apt-get update` werden die Paketquellen aktualisiert. Mit `sudo apt-get upgrade` werden installierte Pakete auf neuere Versionen angehoben [4].
-
-![Systemaktualisierung in Ubuntu](images/04_update_upgrade.png)
-
-### 4.4 Grundlegende Navigation im Terminal
-
-Zur Orientierung in der Linux-Umgebung wurden zunächst einfache Navigationsbefehle verwendet:
-
-```bash
-pwd
-ls
-cd ..
-cd /mnt/c/Users/Name/Downloads
-```
-
-Mit `pwd` wurde das aktuelle Verzeichnis ausgegeben. Mit `ls` wurden Dateien und Ordner angezeigt. Über `cd` konnte in andere Verzeichnisse gewechselt werden. Besonders wichtig war der Zugriff auf Windows-Ordner über `/mnt/c/`, da sich die heruntergeladenen PDF-Dateien auf dem Windows-Dateisystem befanden [2].
-
-![Navigation im WSL-Terminal](images/05_navigation.png)
 
 ### 4.5 Speicherverbrauch mit `du` anzeigen und sortieren
 
@@ -133,7 +106,7 @@ du -h | sort -hr
 
 Dabei wird die Ausgabe von `du` per Pipe (`|`) an `sort` übergeben. Mit `-h` kann `sort` Größenangaben wie K, M oder G korrekt auswerten [5].
 
-![Speicherverbrauch mit du und sort](images/06_du_sort.png)
+![Speicherverbrauch mit du und sort](Bilder/Ubuntu-Festplatte)
 
 ### 4.6 Verwendung von `grep`
 
