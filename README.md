@@ -181,7 +181,7 @@ ls
 ls | grep -i pdf
 ```
 
-![PDF-Dateien im Zielordner](Bilder/pdf-ordner)
+
 
 ### 4.8 Durchsuchen der PDFs nach „kapazitiv“
 
@@ -200,7 +200,7 @@ Bedeutung der Optionen:
 
 Damit werden alle PDF-Dateien im aktuellen Ordner gleichzeitig durchsucht. Das Platzhalterzeichen `*.pdf` steht für alle Dateien mit der Endung `.pdf`.
 
-![Suche nach kapazitiv mit pdfgrep](Bilder/pdfgrep-kapazitiv)
+![Suche nach kapazitiv mit pdfgrep](Bilder/pdfgrep-benutzt)
 
 ### 4.9 Durchsuchen aller PDFs in einem Ordner
 
@@ -229,7 +229,6 @@ pdfgrep -i -n -H --cache "piezo" *.pdf
 
 Damit konnten relevante Stellen in den bereitgestellten PDF-Dateien schnell gefunden werden.
 
-![Weitere Suchbegriffe mit pdfgrep](Bilder/pdfgrep-benutzt)
 
 ### 4.11 Installation einer grafischen Oberfläche
 
