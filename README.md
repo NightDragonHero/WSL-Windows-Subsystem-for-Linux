@@ -69,15 +69,15 @@ Für manche Aufgaben ist eine grafische Oberfläche angenehmer als reines Arbeit
 
 Zuerst wurde in den Windows-Features das **Windows-Subsystem für Linux** aktiviert. Zusätzlich wurde die **Plattform für virtuelle Computer** aktiviert. Danach wurde das System neu gestartet.
 
-![Aktivierung von WSL in den Windows-Features](Bilder/winFeautures)
+![Aktivierung von WSL in den Windows-Features](Bilder/winFeautures.png)
 
 ### 4.2 Installation von Ubuntu
 
 Anschließend wurde Ubuntu über den Microsoft Store installiert. Beim ersten Start wurde `wsl` geöffnet und ein Linux-Benutzername sowie ein Passwort erstellt. Dieses Passwort wird später auch für `sudo`-Befehle und für die Anmeldung über XRDP benötigt.
 
-![Installation von Ubuntu über den Microsoft Store](Bilder/Ubuntu-Micr)
+![Installation von Ubuntu über den Microsoft Store](Bilder/Ubuntu-Micr.png)
 
-![Erster Start von Ubuntu und Anlegen von Benutzername und Passwort](Bilder/Ubuntu-start)
+![Erster Start von Ubuntu und Anlegen von Benutzername und Passwort](Bilder/Ubuntu-start.png)
 
 ### 4.3 System aktualisieren
 
@@ -116,7 +116,7 @@ du -h | sort -hr
 
 Dabei wird die Ausgabe von `du` per Pipe (`|`) an `sort` übergeben. Mit `-h` kann `sort` Größenangaben wie K, M oder G korrekt auswerten.
 
-![Speicherverbrauch mit du und sort](Bilder/Ubuntu-Festplatte)
+![Speicherverbrauch mit du und sort](Bilder/Ubuntu-Festplatte.png)
 
 ### 4.5 Verwendung von `grep`
 
@@ -140,7 +140,7 @@ ls | grep -Ei "pdf|txt|log"
 
 `grep` durchsucht dabei die Eingabe nach einem Muster und gibt nur passende Zeilen aus.
 
-![Beispiel für grep im Terminal](Bilder/grep-auspr)
+![Beispiel für grep im Terminal](Bilder/grep-auspr.png)
 
 ### 4.6 Installation von `pdfgrep`
 
@@ -162,7 +162,7 @@ Zusätzlich kann die Paketliste vor der Installation noch einmal aktualisiert we
 sudo apt-get update
 ```
 
-![Installation von pdfgrep](Bilder/pdfgrep-downl)
+![Installation von pdfgrep](Bilder/pdfgrep-downl.png)
 
 ### 4.7 Herunterladen und Vorbereiten der PDF-Dateien
 
@@ -200,7 +200,7 @@ Bedeutung der Optionen:
 
 Damit werden alle PDF-Dateien im aktuellen Ordner gleichzeitig durchsucht. Das Platzhalterzeichen `*.pdf` steht für alle Dateien mit der Endung `.pdf`.
 
-![Suche nach kapazitiv mit pdfgrep](Bilder/pdfgrep-benutzt)
+![Suche nach kapazitiv mit pdfgrep](Bilder/pdfgrep-benutzt.png)
 
 ### 4.9 Durchsuchen aller PDFs in einem Ordner
 
@@ -247,7 +247,7 @@ sudo /etc/init.d/xrdp start
 
 Zuerst wurde das System aktualisiert, danach wurden XFCE und XRDP installiert. Anschließend wurde eine Sicherung der Datei `xrdp.ini` erstellt und die Konfiguration angepasst. Abschließend wurde der XRDP-Dienst gestartet.
 
-![Installation von XFCE und XRDP](Bilder/RemoteDesktopGUI-anfang)
+![Installation von XFCE und XRDP](Bilder/RemoteDesktopGUI-anfang.png)
 
 ### 4.12 Bearbeitung von `startwm.sh`
 
@@ -269,7 +269,7 @@ startxfce4
 
 Die Datei wurde mit **STRG + O** gespeichert und mit **STRG + X** wieder geschlossen.
 
-![Bearbeitung von startwm.sh in nano](Bilder/RemoteDesktopGUI-geändert)
+![Bearbeitung von startwm.sh in nano](Bilder/RemoteDesktopGUI-geändert.png)
 
 ### 4.13 Verbindung über Remote Desktop
 
@@ -289,11 +289,11 @@ hergestellt.
 
 Nach der Anmeldung mit dem Ubuntu-Benutzer und dem gesetzten Passwort konnte die grafische Oberfläche verwendet werden.
 
-![Starten mit Remote Desktop](Bilder/winRemoteDesk-start)
+![Starten mit Remote Desktop](Bilder/winRemoteDesk-start.png)
 
-![Verbindung mit Remote Desktop](Bilder/RemoteDesktopGUI-passwort)
+![Verbindung mit Remote Desktop](Bilder/RemoteDesktopGUI-passwort.png)
 
-![Erfolgreicher XFCE-Desktop in WSL](Bilder/RemoteDesktopGUI-ende)
+![Erfolgreicher XFCE-Desktop in WSL](Bilder/RemoteDesktopGUI-ende.png)
 
 
 
